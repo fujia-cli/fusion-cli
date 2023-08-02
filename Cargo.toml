@@ -1,8 +1,28 @@
 [package]
 name = "fusion-cli"
-version = "0.1.0"
+version = "0.1.1"
+authors = ["fujia <fujia.site@gmail.com>"]
 edition = "2021"
+
+description = "An awesome CLI toolkits built with Rust"
+readme = "README.md"
+keywords = ["terminal-app", "deployment", "cli"]
+
+homepage = "https://github.com/fujia-cli/fusion-cli"
+repository = "https://github.com/fujia-cli/fusion-cli"
+
+license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+anyhow = "1.0"
+bollard = "0.14.0"
+indicatif = "0.17"
+futures-util = "0.3.23"
+console = { version = "0.15", default-features = false, features = ["ansi-parsing"] }
+tokio = {version = "1.20", features = ["full"]}
+clap = {version = "4.0.32", features = ["derive"]}
+uuid = {version = "1.1.2", features = ["v4"]}
+prettytable-rs = "0.10"
+dirs = "5.0.0"
